@@ -32,3 +32,34 @@ int main(void)
 	printf("Remainder is %d\n", rem);
 
 }
+
+
+#include <stdio.h>
+
+int main(void)
+{
+	int integer1;
+	int integer2;
+	int integer3;
+	int v;
+	int s;
+	int x;
+
+
+	printf("物體速度\n");
+	scanf_s("%d", &integer1);
+
+	printf("加速度\n");
+	scanf_s("%d", &integer2);
+
+	printf("經過時間\n");
+	scanf_s("%d", &integer3);
+
+	v = integer1 + integer2 * integer3;
+	x = integer3 * integer3 * integer2 / 2;
+	s = integer1 * integer3 + x;
+
+
+	printf("最後速度 為 %d\n", v);
+	printf("移動距離 為 %d\n", s);
+}

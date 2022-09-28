@@ -63,3 +63,65 @@ int main(void)
 	printf("最後速度 為 %d\n", v);
 	printf("移動距離 為 %d\n", s);
 }
+
+
+int main(void)
+{
+	printf("輸入3個數字判斷最大值與最小值\n");
+	printf("以及總和,平均數,乘積\n");
+
+	int a, b, c, largest=0 ,  smallest=11111;
+	int sum;
+	int product;
+	int average;
+
+	scanf_s("%d %d %d", &a, &b, &c);
+	if (a > b) {
+		if (a > c)
+			largest = a;
+		else
+			largest = c;
+		}
+	else if (b > a) {
+		if (b > c)
+			largest = b;
+		else
+			largest = c;
+	}
+	else if (c > a) {
+		if (c > b)
+			largest = c;
+		else
+			largest = b;
+	}
+
+
+	if (a < b) {
+		if (a < c)
+			smallest = a;
+		else
+			smallest = c;
+	}
+	else if (b < a) {
+		if (b < c)
+			smallest = b;
+		else
+			smallest = c;
+	}
+	else if (c < a) {
+		if (c < b)
+			smallest = c;
+		else
+			smallest = b;
+	}
+
+
+	sum = a + b + c;
+	product = a * b * c;
+	average = (a + b + c) / 3;
+	printf("最大值 is %d\n",largest);
+	printf("最小值 is %d\n", smallest);
+	printf("總和 is %d\n", sum);
+	printf("平均數 is %d\n", average);
+	printf("乘積 is %d\n", product);
+	}
